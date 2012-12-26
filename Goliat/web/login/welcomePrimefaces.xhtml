@@ -1,0 +1,65 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:p="http://primefaces.org/ui">
+
+    <f:view contentType="text/html">
+
+        <h:head>
+            <f:facet name="first">
+                <meta content='text/html; charset=UTF-8' http-equiv="Content-Type"/>
+                <title>infoColegios - Bienvenido al Sistema de Administracion</title>
+            </f:facet>
+        </h:head>
+
+        <h:body>
+            <p:notificationBar  widgetVar="TopBar" rendered="true" parent="">
+            <p:graphicImage value="Resources/descarga.jpg" title="imagen"/> 
+        </p:notificationBar>
+
+            <p:layout fullPage="true">  
+                <p:layoutUnit position="north" header="infoColegios - Bienvenido al Sistema de Administracion" size="250" resizable="false" closable="false" collapsible="true">
+                    <p:graphicImage value="Resources/descarga.jpg" title="imagen"/> 
+                            
+                </p:layoutUnit>
+
+                <p:layoutUnit position="west" size="300" header="Opciones" collapsible="true" resizable="true">
+                    <p:menu>
+                        <p:submenu label="Resources" >
+                            <p:menuitem value="Informacion Basica" url="http://www.primefaces.org/showcase-labs/ui/home.jsf" />
+                            <p:menuitem value="Noticias" url="http://www.primefaces.org/documentation.html" />
+                            <p:menuitem value="Olvide mi clave" url="http://forum.primefaces.org/" />
+                            <p:menuitem value="Acerca de..." url="http://www.primefaces.org/themes.html" />
+                        </p:submenu>
+                    </p:menu>
+                </p:layoutUnit>
+
+                <p:layoutUnit position="center" header="Ingrese al modulo de autenticacion" >
+
+                    <h:form>
+
+                        <h:panelGrid columns="2" cellpadding="7">
+                            <h:outputLabel for="Usuariol" value="Usuario:" style="font-weight:bold"/>
+                            <p:inputText id="usuario" value="" />
+                            <h:outputLabel for="Constrasenal" value="Constrasena:" style="font-weight:bold"/>
+                            <p:password id="constrasena" value="" />
+                            <p:commandButton value="Autenticarse"/>
+                            <p:commandButton value="Borrar"/>
+                        </h:panelGrid>
+
+                    </h:form>
+                </p:layoutUnit>
+                <p:layoutUnit position="south" header=""  resizable="false" closable="false" collapsible="true">
+                </p:layoutUnit>
+            </p:layout>
+
+        </h:body>
+
+        <h:outputLink value="#" onclick="topBar.show()">Show</h:outputLink>
+        <h:outputLink value="#" onclick="topBar.show()">Show</h:outputLink> 
+    </f:view>
+
+</html>
+
